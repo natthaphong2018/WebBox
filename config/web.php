@@ -11,6 +11,14 @@ $config = [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
     ],
+    //add Login
+    'modules' => [
+        'user' => [
+            'class' => 'dektrium\user\Module',
+            'enableUnconfirmedLogin' => true, // ปิดยืนยันเมล
+            'admins' => ['admin'],
+        ],
+    ],
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
@@ -19,10 +27,11 @@ $config = [
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
+        /* Off user and use Login
         'user' => [
             'identityClass' => 'app\models\User',
             'enableAutoLogin' => true,
-        ],
+        ],*/
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
@@ -43,14 +52,14 @@ $config = [
             ],
         ],
         'db' => $db,
-        /*
+        //เปิด urlManager จัดเรียง url
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
             ],
         ],
-        */
+        
     ],
     'params' => $params,
 ];
