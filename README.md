@@ -2,7 +2,8 @@
     <a href="https://github.com/yiisoft" target="_blank">
         <img src="https://avatars0.githubusercontent.com/u/993323" height="100px">
     </a>
-    <h1 align="center">Yii 2 Basic Project Template</h1>
+    <h1 align="center">WebCodeBox</h1>
+    <h3 align="center">Yii 2 Basic Project Template By โป้ง & เอ็ม</h3>
     <br>
 </p>
 
@@ -115,7 +116,7 @@ Edit the file `config/db.php` with real data, for example:
 ```php
 return [
     'class' => 'yii\db\Connection',
-    'dsn' => 'mysql:host=localhost;dbname=yii2basic',
+    'dsn' => 'mysql:host=localhost;dbname=webbox',
     'username' => 'root',
     'password' => '1234',
     'charset' => 'utf8',
