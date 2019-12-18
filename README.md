@@ -5,6 +5,10 @@
     <h1 align="center">WebCodeBox</h1>
     <h3 align="center">Yii 2 Basic Project Template By โป้ง & เอ็ม</h3>
     <br>
+    <hr/>
+    <ul>
+        <li>Dektium ใช้สำหรับ Login and Registered : <a href='https://github.com/dektrium/yii2-user/tree/master/docs'>Link here!!</a></li>
+    </ul>
 </p>
 
 Yii 2 Basic Project Template is a skeleton [Yii 2](http://www.yiiframework.com/) application best for
