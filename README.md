@@ -7,7 +7,7 @@
     <br>
     <hr/>
     <ul>
-        <li>Dektium ใช้สำหรับ Login and Registered : <a href='https://github.com/dektrium/yii2-user/tree/master/docs'>Link here!!</a></li>
+        <li>Dektium ใช้สำหรับ Login and Registered : <a href='https://github.com/dektrium/yii2-user/tree/master/docs' target='_blank'>Link here!!</a></li>
     </ul>
 </p>
 
