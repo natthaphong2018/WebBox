@@ -3,7 +3,7 @@
         <img src="https://avatars0.githubusercontent.com/u/993323" height="100px">
     </a>
     <h1 align="center">WebCodeBox</h1>
-    <h3 align="center">Yii 2 Basic Project Template By โป้ง & เอ็ม</h3>
+    <h3 align="center">Yii 2 Basic Project Template By โป้ง & เอ็ม | Branch Pong</h3>
     <br>
     <hr/>
     <h4>Modules and Components</h4>
