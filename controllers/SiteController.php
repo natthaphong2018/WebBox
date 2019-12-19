@@ -9,6 +9,8 @@ use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use yii\base\Security;
+use app\models\MasterUsers;
 
 class SiteController extends Controller
 {
@@ -61,7 +63,14 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $getUser = MasterUsers::find()->all();
+        
+        foreach($getUser as $item)
+        {
+            $item->password = Yii::$app->getSecurity()->decryptByKey(utf8_decode($item->password), $item->data_key);
+        }
+        
+        return $this->render('index', ['data' => $getUser]);
     }
 
     /**
@@ -124,5 +133,30 @@ class SiteController extends Controller
     public function actionAbout()
     {
         return $this->render('about');
+    }
+
+    public function actionUserRegistered()
+    {
+        $model = new MasterUsers();
+
+        if ($model->load(Yii::$app->request->post()) && $model->validate()) {
+
+            $secreteKey = utf8_encode(Yii::$app->getSecurity()->generateRandomKey(32));
+
+            $masterUser = new MasterUsers();
+            $masterUser->username = $model->username;
+            $masterUser->password = utf8_encode(Yii::$app->getSecurity()->encryptByKey($model->password , $secreteKey));
+            $masterUser->email = $model->email;
+            $masterUser->data_key = $secreteKey;
+            $masterUser->save();
+
+
+            //return $this->render('Index', ['model' => $model]);
+            return $this->redirect(['/site/index']);
+            //refer : https://stackoverflow.com/a/23914678
+        } else {
+            // either the page is initially displayed or there is some validation error
+            return $this->render('user_register', ['model' => $model]);
+        }
     }
 }

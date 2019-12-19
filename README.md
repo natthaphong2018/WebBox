@@ -9,6 +9,7 @@
     <h4>Modules and Components</h4>
     <ul>
         <li>Dektium ใช้สำหรับ Login and Registered : <a href='https://github.com/dektrium/yii2-user/tree/master/docs' target='_blank'>Link here!!</a></li>
+        <li>ตัวอย่างการ decrypt & encrypt : <a href='https://stackoverflow.com/a/33723061' target='_blank'>Link here!!</a></li>
     </ul>
 </p>
 
